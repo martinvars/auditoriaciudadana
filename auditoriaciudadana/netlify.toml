@@ -1,0 +1,27 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Redirección de todas las rutas a index.html para SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Redirección de www a dominio principal
+[[redirects]]
+  from = "https://www.auditoriaciudadana.org/*"
+  to = "https://auditoriaciudadana.org/:splat"
+  status = 301
+  force = true
+
+# Headers de seguridad
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self' https://xfztookxklscvnctqcog.supabase.co; style-src 'self' 'unsafe-inline'; img-src 'self' https://images.unsplash.com data:; connect-src 'self' https://xfztookxklscvnctqcog.supabase.co"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
