@@ -109,11 +109,19 @@ const ProposalsList = () => {
     }
   };
 
-  const handleVote = async (proposalId: string, type: 'up' | 'down') => {
+  cconst handleVote = async (proposalId: string, type: 'up' | 'down') => {
+    const nickname = localStorage.getItem('userNickname');
+    
+    if (!nickname) {
+      setActionType('vote');
+      setIsRegisterModalOpen(true);
+      return;
+    }
+  
     try {
       const storageKey = `vote_${proposalId}`;
       const existingVote = sessionStorage.getItem(storageKey);
-
+  
       if (existingVote) {
         if (existingVote === type) {
           sessionStorage.removeItem(storageKey);
@@ -137,13 +145,15 @@ const ProposalsList = () => {
           .insert([{ 
             proposal_id: proposalId, 
             vote_type: type,
-            user_id: null
+            user_id: null,
+            nickname: nickname
           }]);
       }
-
+  
       await fetchProposals();
     } catch (error) {
       console.error('Error handling vote:', error);
+      showNotification('Error al procesar el voto. Por favor, inténtalo de nuevo.', 'error');
     }
   };
 
@@ -294,7 +304,10 @@ const ProposalsList = () => {
     if (actionType === 'proposal') {
       setIsNewProposalModalOpen(true);
     } else if (actionType === 'comment') {
-      // The comment form will now be accessible since we have a nickname
+      setIsCommentModalOpen(true);
+    } else if (actionType === 'vote') {
+      // The vote buttons will now be accessible since we have a nickname
+      showNotification('Ya puedes votar las propuestas');
     }
     setActionType(null);
   };
