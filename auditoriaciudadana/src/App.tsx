@@ -15,7 +15,7 @@ function App() {
   const { user } = useAuth();
 
   // Si el usuario está autenticado y es admin, mostrar el panel de administración
-  if (user?.email === 'admin@auditoria-ciudadana.org') {
+  if (user?.email === 'admin@auditoria-ciudadana.org' || user?.phone === '+34600000000') {
     return <AdminPanel />;
   }
 
