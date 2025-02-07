@@ -1,5 +1,13 @@
-import React from 'react';
-import { BarChart as ChartBar, Mail, Github, Shield, Cookie, FileText, Globe2 } from 'lucide-react';
+import React from "react";
+import {
+  BarChart as ChartBar,
+  Mail,
+  Github,
+  Shield,
+  Cookie,
+  FileText,
+  Globe2,
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -12,7 +20,8 @@ const Footer = () => {
               <span className="text-xl font-bold">Auditoría Ciudadana</span>
             </div>
             <p className="text-gray-400">
-              Plataforma ciudadana para el análisis y propuesta de mejoras en el gasto público español.
+              Plataforma ciudadana para el análisis y propuesta de mejoras en el
+              gasto público español.
             </p>
             <div className="mt-4 flex items-center gap-2">
               <Globe2 size={16} className="text-gray-400" />
@@ -28,10 +37,35 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
             <ul className="space-y-2">
-              <li><a href="#presupuestos" className="text-gray-400 hover:text-white">Presupuestos</a></li>
-              <li><a href="#propuestas" className="text-gray-400 hover:text-white">Propuestas</a></li>
-              <li><a href="#metodologia" className="text-gray-400 hover:text-white">Metodología</a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-white">Sobre Nosotros</a></li>
+              <li>
+                <a
+                  href="#presupuestos"
+                  className="text-gray-400 hover:text-white"
+                >
+                  Presupuestos
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#propuestas"
+                  className="text-gray-400 hover:text-white"
+                >
+                  Propuestas
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#metodologia"
+                  className="text-gray-400 hover:text-white"
+                >
+                  Metodología
+                </a>
+              </li>
+              <li>
+                <a href="#about" className="text-gray-400 hover:text-white">
+                  Sobre Nosotros
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -39,19 +73,28 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/legal/aviso-legal" className="flex items-center gap-2 text-gray-400 hover:text-white">
+                <a
+                  href="/legal/aviso-legal"
+                  className="flex items-center gap-2 text-gray-400 hover:text-white"
+                >
                   <Shield size={16} />
                   Aviso Legal y Privacidad
                 </a>
               </li>
               <li>
-                <a href="/legal/cookies" className="flex items-center gap-2 text-gray-400 hover:text-white">
+                <a
+                  href="/legal/cookies"
+                  className="flex items-center gap-2 text-gray-400 hover:text-white"
+                >
                   <Cookie size={16} />
                   Política de Cookies
                 </a>
               </li>
               <li>
-                <a href="/legal/terminos" className="flex items-center gap-2 text-gray-400 hover:text-white">
+                <a
+                  href="/legal/terminos"
+                  className="flex items-center gap-2 text-gray-400 hover:text-white"
+                >
                   <FileText size={16} />
                   Términos y Condiciones
                 </a>
@@ -62,14 +105,21 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contacto</h3>
             <div className="space-y-4">
-              <a href="mailto:martin@overture.life" className="flex items-center gap-2 text-gray-400 hover:text-white">
+              <a
+                href="mailto:martin@overture.life"
+                className="flex items-center gap-2 text-gray-400 hover:text-white"
+              >
                 <Mail size={20} />
                 martin@overture.life
               </a>
               <p className="text-sm text-gray-400">
-                Para cualquier consulta sobre el sitio, contacta directamente con Martín Varsavsky.
+                Para cualquier consulta sobre el sitio, contacta directamente
+                con Martín Varsavsky.
               </p>
-              <a href="https://github.com/auditoria-ciudadana" className="flex items-center gap-2 text-gray-400 hover:text-white">
+              <a
+                href="https://github.com/martinvars/auditoriaciudadana"
+                className="flex items-center gap-2 text-gray-400 hover:text-white"
+              >
                 <Github size={20} />
                 GitHub
               </a>
@@ -78,9 +128,12 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p className="mb-2">© 2024 Auditoría Ciudadana. Todos los derechos reservados.</p>
+          <p className="mb-2">
+            © 2024 Auditoría Ciudadana. Todos los derechos reservados.
+          </p>
           <p className="text-sm">
-            Responsable: Martín Varsavsky | NIF: [Número Fiscal] | Domicilio: [Dirección Legal]
+            Responsable: Martín Varsavsky | NIF: [Número Fiscal] | Domicilio:
+            [Dirección Legal]
           </p>
         </div>
       </div>
