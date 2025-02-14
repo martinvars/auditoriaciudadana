@@ -69,7 +69,7 @@ const Footer = () => {
               <p className="text-sm text-gray-400">
                 Para cualquier consulta sobre el sitio, contacta directamente con Martín Varsavsky.
               </p>
-              <a href="https://github.com/auditoria-ciudadana" className="flex items-center gap-2 text-gray-400 hover:text-white">
+              <a href="https://github.com/martinvars/auditoriaciudadana" className="flex items-center gap-2 text-gray-400 hover:text-white">
                 <Github size={20} />
                 GitHub
               </a>
