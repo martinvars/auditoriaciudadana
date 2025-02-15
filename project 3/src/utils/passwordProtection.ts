@@ -1,6 +1,6 @@
 import { supabase } from '../lib/supabase';
 
-export const ADMIN_PASSWORD = 'camino75';
+export const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
 export async function checkDeletePermission(itemType: 'proposal' | 'comment', nickname: string): Promise<boolean> {
   // Check if user is admin
